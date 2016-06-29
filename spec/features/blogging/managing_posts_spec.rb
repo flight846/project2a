@@ -13,7 +13,7 @@ RSpec.describe 'Blogging' do
 
       fill_in 'Title', with: 'The Title'
       fill_in 'Body', with: 'The Post Body'
-      click_on 'Create Post'
+      click_on 'Submit'
 
       expect(page).to have_content('successfully created')
       expect(page).to have_content('The Title')

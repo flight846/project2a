@@ -10,6 +10,6 @@ RSpec.shared_examples "a signed in user" do
   end
 
   it "shows a link to create a new post" do
-    expect(page).to have_link 'New Post', href: new_user_post_path(user)
+    expect(page).to have_link 'Submit a Query', href: new_user_post_path(user)
   end
 end
