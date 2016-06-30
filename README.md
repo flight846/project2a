@@ -6,7 +6,7 @@ This simple Q & A app allows users to view, create, edit and delete qusetions an
 
 The development is done in a test-driven manner based on test files provided in the 'spec' folder.
 
-The app is currently hosted on the Heroku platform: [Query.Me](http://queryme.herokuapp.com/)
+The app is currently hosted on the Heroku platform: [Query.Me](https://queryme2016.herokuapp.com/)
 
 ###Technology
 The technology used include:
