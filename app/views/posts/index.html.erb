@@ -8,10 +8,12 @@
         <div class="questions-list">
             <span class="answers-total"><strong><%= post.comments.count %><br /> Answers</strong></span>
             <h2><%= post.title %></h2>
-            <p><span class="user"><a class="ion-person"></a>&nbsp;&nbsp;Submitted by: <strong><%= post.user.email %></strong> | <a class="ion-paperclip"></a>&nbsp;&nbsp;Submitted <strong><%= time_ago_in_words(post.created_at) %> ago</strong></span></p>
-              <%= link_to 'Show', user_post_path(post.user_id, post) %>
-              <%= link_to 'Edit', edit_user_post_path(post.user_id, post) %>
-              <%= link_to 'Destroy', user_post_path(post.user_id, post), method: :delete, data: { confirm: 'Are you sure?' } %>
+            <small><span class="user"><a class="ion-person"></a>&nbsp;&nbsp;Submitted by: <strong><%= post.user.email %></strong> | <a class="ion-paperclip"></a>&nbsp;&nbsp;Submitted <strong><%= time_ago_in_words(post.created_at) %> ago</strong></span></small>
+            <div class="btn-group pull-right">
+              <%= link_to 'Show', user_post_path(post.user_id, post), class: "btn btn-sm btn-default" %>
+              <%= link_to 'Edit', edit_user_post_path(post.user_id, post), class: "btn btn-sm btn-default" %>
+              <%= link_to 'Destroy', user_post_path(post.user_id, post), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-default" %>
+            </div>
         </div>
       </div>
       <% end %>
