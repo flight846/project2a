@@ -18,6 +18,7 @@
       text-transform: uppercase;
       color: #303030;
       font-weight: 600;
+      margin-top: 0;
       margin-bottom: 30px;
   }
   h4 {
@@ -80,6 +81,14 @@ td {
   .item span {
       font-style: normal;
   }
+  .comment-box {
+    border: 2px;
+  }
+  
+  .post {
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee;
+}
   .panel {
       border: 1px solid #1f1f1f;
       border-radius:0 !important;

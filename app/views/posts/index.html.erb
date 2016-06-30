@@ -2,26 +2,29 @@
 <div class="container-fluid">
   <h1>Recent</h1>
   <hr />
-  <div class="row posts">
+  <div class="posts">
     <% @posts.reverse_each do |post| %>
-    <div class="col-md-2">
-      <!--Number of comments-->
-    </div>
-    <div class="col-md-10 post">
-        <div>
-          <h2><%= post.title %></h2>
+      <div class="post">
+        <div class="col-md-2 commment-box">
+            3
         </div>
-        <div>
-          <p><%= post.body %></p>
+        <div class="col-md-10">
+          <div>
+            <h2><%= post.title %></h2>
+          </div>
+          <div>
+            <p><%= post.body %></p>
+          </div>
         </div>
         <div class="row">
-            <%= link_to 'Show', user_post_path(post.user_id, post) %></td>
-            <%= link_to 'Edit', edit_user_post_path(post.user_id, post) %></td>
-            <%= link_to 'Destroy', user_post_path(post.user_id, post), method: :delete, data: { confirm: 'Are you sure?' } %>
-        <hr />
+          <%= link_to 'Show', user_post_path(post.user_id, post) %>
+          <%= link_to 'Edit', edit_user_post_path(post.user_id, post) %>
+          <%= link_to 'Destroy', user_post_path(post.user_id, post), method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
-    </div>
-    <% end %>
+        
+      </div>
+      <% end %>
+    
   </div>
   <%= link_to 'Back', users_path %> | 
   <%= link_to 'Submit New Question', new_user_post_path(session[:user_id]) %>
