@@ -5,23 +5,14 @@
   <div class="posts">
     <% @posts.reverse_each do |post| %>
       <div class="post">
-        <div class="col-md-2">
-            <div class="commment-box"><strong><%= post.comments.count %><br /> Answers</strong></div>
-        </div>
-        <div class="col-md-10">
-          <div>
+        <div class="questions-list">
+            <span class="answers-total"><strong><%= post.comments.count %><br /> Answers</strong></span>
             <h2><%= post.title %></h2>
-          </div>
-          <div class="row">
-            <small><a class="ion-person"></a>&nbsp;&nbsp;Submitted by: <strong><%= post.user.email %></strong> | <a class="ion-paperclip"></a>&nbsp;&nbsp;Submitted <strong><%= time_ago_in_words(post.created_at) %> ago</strong></small>
-          </div>
+            <p><span class="user"><a class="ion-person"></a>&nbsp;&nbsp;Submitted by: <strong><%= post.user.email %></strong> | <a class="ion-paperclip"></a>&nbsp;&nbsp;Submitted <strong><%= time_ago_in_words(post.created_at) %> ago</strong></span></p>
+              <%= link_to 'Show', user_post_path(post.user_id, post) %>
+              <%= link_to 'Edit', edit_user_post_path(post.user_id, post) %>
+              <%= link_to 'Destroy', user_post_path(post.user_id, post), method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
-        <div class="row">
-          <%= link_to 'Show', user_post_path(post.user_id, post) %>
-          <%= link_to 'Edit', edit_user_post_path(post.user_id, post) %>
-          <%= link_to 'Destroy', user_post_path(post.user_id, post), method: :delete, data: { confirm: 'Are you sure?' } %>
-        </div>
-        
       </div>
       <% end %>
     

@@ -30,7 +30,7 @@
       margin-bottom: 30px;
   }
 
-  .commment-box {
+  .answers-total {
     margin: auto;
     text-align: center;
     color: #fff;
@@ -50,11 +50,66 @@
     padding: 0;
 }
   
-  .post {
-    padding: 10px;
-    border-bottom: 1px solid #eeeeee;
+  .user {
+    color: #000;
 }
 
+  .questions-list { 
+    padding:30px 0; 
+    height:100%; 
+    overflow:hidden; 
+    position:relative;
+    border-bottom:1px solid #e5e5e5;
+}
+
+  .question-list:hover { cursor:pointer; }
+  
+  .question-list h2 {
+    margin:0;
+    font-size:18px;
+    float:left;
+    padding-bottom: 10px
+}
+
+  .question-list p {
+    float:left;
+    max-width:86%;
+    width: 100%;
+    font-size:14px;
+    border-bottom:none;
+}
+  
+  .question-list p span {
+    float:left;
+    margin-right:20px;
+}
+
+  .qusetion-list a {
+    margin-right: 10px;
+  } 
+
+  .answers-total {
+    float:left;
+    width:65px;
+    height:65px;
+    font-size:14px;
+    text-align:center; 
+    line-height:normal;
+    color:#fff;
+    margin-right:25px;
+}
+
+  .answers_total a {
+    display:block;
+    text-align:center;
+    font-size:25px;
+    font-weight:bold;
+    padding-top:8px;
+    color:#fff;
+}
+
+  
+  
   .navbar {
       margin-bottom: 0;
       background-color: #1f1f1f;
