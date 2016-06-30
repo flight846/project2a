@@ -30,9 +30,16 @@
       margin-bottom: 30px;
   }
 
-  .comment-box {
-    border: 2px;
+  .commment-box {
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    height: 65px;
+    width: 65px;
+    background-color: #4BAE4F;
+    border-radius: 5px;
   }
+  
   .message {
     color: #E64A19;
     position: absolute;
