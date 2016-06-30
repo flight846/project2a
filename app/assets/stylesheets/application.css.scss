@@ -9,6 +9,7 @@
   }
 
   body {
+      padding-top: 60px;
       font: 300 14px Lato, sans-serif;
       line-height: 1.8;
       color: #616161;
@@ -70,3 +71,9 @@
       border-color: transparent;
       color: #fff !important;
   }
+  
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+}

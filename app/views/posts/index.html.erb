@@ -12,8 +12,8 @@
           <div>
             <h2><%= post.title %></h2>
           </div>
-          <div>
-            <p><%= post.body %></p>
+          <div class="row">
+            <small><a class="ion-person"></a>&nbsp;&nbsp;Submitted by: <%= post.user.email %> | <a class="ion-paperclip"></a>&nbsp;&nbsp;Submitted on: <%= post.created_at %></small>
           </div>
         </div>
         <div class="row">

@@ -29,12 +29,10 @@ RSpec.describe 'Reading posts' do
 
     within posts.first do
       expect(page).to have_content('Newest Title')
-      expect(page).to have_content('newest body')
     end
 
     within posts.last do
       expect(page).to have_content('Oldest Title')
-      expect(page).to have_content('oldest body')
     end
   end
 end
