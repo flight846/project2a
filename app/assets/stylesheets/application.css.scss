@@ -84,6 +84,14 @@ td {
   .comment-box {
     border: 2px;
   }
+  .message {
+    position: absolute;
+    transform: translate(50%, 50%);
+    top: 5%;
+    left: 13.8%;
+    margin: 0;
+    padding: 0;
+}
   
   .post {
     padding: 10px;
