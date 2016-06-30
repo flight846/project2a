@@ -1,4 +1,4 @@
-<h1>New Post</h1>
+<h1>Ask a Query</h1>
 
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
@@ -13,18 +13,18 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, autofocus: true, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, class: "form-control" %>
   </div>
   <%= f.hidden_field :user_id, :value => @user.id %>
-  <div class="actions">
-  <%= f.submit "Submit" %>
- </div>
+  <div class="form-group">
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  </div>
 <% end %>
 
 

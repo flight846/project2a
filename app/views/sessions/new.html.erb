@@ -2,7 +2,7 @@
 <%= form_tag sessions_path do %>
 <div class="form-group">
     <%= label_tag :email %>
-    <%= text_field_tag :email, nil, class: "form-control"%>
+    <%= text_field_tag :email, nil, autofocus: true, class: "form-control"%>
 </div>
 <div class="form-group">
     <%= label_tag :password %>
